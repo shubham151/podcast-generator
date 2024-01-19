@@ -1,0 +1,18 @@
+name: "Podcast Generator"
+author: "Shubham Mishra"
+description: "Generates Feed for a podcast from yaml file"
+runs:
+  using: "docker"
+  image: "DockerFile"
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: "Commiter's email id"
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: "Commiter's name"
+    required: true
+    default: ${{ github.actor }}@localhost
